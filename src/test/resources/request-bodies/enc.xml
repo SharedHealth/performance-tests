@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+        xmlns="http://www.w3.org/2005/Atom">
+    <title>Encounter</title>
+    <id>urn:94b57cbc-4cf2-4100-a0bd-ce27639b2acf</id>
+    <updated>2015-01-27T14:21:08+05:30</updated>
+    <entry>
+        <title>Composition</title>
+        <id>urn:981b2b3c-942a-45dd-a844-0f61502d65c9</id>
+        <updated>2015-01-27T14:21:40.261+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Composition
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:981b2b3c-942a-45dd-a844-0f61502d65c9"/>
+                </identifier>
+                <date value="2015-01-27T14:21:08+05:30"/>
+                <status value="final"/>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <encounter>
+                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <display value="Encounter"/>
+                </encounter>
+                <section>
+                    <content>
+                        <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                        <display value="Encounter"/>
+                    </content>
+                </section>
+                <section>
+                    <content>
+                        <reference value="urn:0caf1152-2070-4008-a77b-d5241a862e84"/>
+                        <display value="complaint"/>
+                    </content>
+                </section>
+                <section>
+                    <content>
+                        <reference value="urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67"/>
+                        <display value="complaint"/>
+                    </content>
+                </section>
+                <section>
+                    <content>
+                        <reference value="urn:025f73b2-2a78-4b31-b3db-58b449244c1a"/>
+                        <display value="complaint"/>
+                    </content>
+                </section>
+            </Composition>
+        </content>
+    </entry>
+    <entry>
+        <title>Encounter</title>
+        <id>urn:cfa32702-bc7c-4fec-8e6c-3048d4417426</id>
+        <updated>2015-01-27T14:21:40.261+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Encounter
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                </identifier>
+                <status value="finished"/>
+                <class value="outpatient"/>
+                <type>
+                    <text value="Consultation"/>
+                </type>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <participant>
+                    <individual>
+                        <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    </individual>
+                </participant>
+                <indication>
+                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <display value="Encounter"/>
+                </indication>
+                <serviceProvider>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10000069.json"/>
+                </serviceProvider>
+            </Encounter>
+        </content>
+    </entry>
+    <entry>
+        <title>complaint</title>
+        <id>urn:0caf1152-2070-4008-a77b-d5241a862e84</id>
+        <updated>2015-01-27T14:21:40.312+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Condition
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:0caf1152-2070-4008-a77b-d5241a862e84"/>
+                </identifier>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <encounter>
+                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <display value="Encounter"/>
+                </encounter>
+                <asserter>
+                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                </asserter>
+                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <code>
+                    <coding>
+                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/referenceterms/b8d6be25-9547-462a-b858-0252ad04d4b3"/>
+                        <code value="R07"/>
+                        <display value="Pain in throat and chest"/>
+                    </coding>
+                    <coding>
+                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
+                        <code value="d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
+                        <display value="Pain in throat and chest"/>
+                    </coding>
+                </code>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/condition-category"/>
+                        <code value="complaint"/>
+                        <display value="Complaint"/>
+                    </coding>
+                </category>
+                <status value="confirmed"/>
+                <onsetDateTime value="2015-01-23T14:21:08+05:30"/>
+            </Condition>
+        </content>
+    </entry>
+    <entry>
+        <title>complaint</title>
+        <id>urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67</id>
+        <updated>2015-01-27T14:21:40.312+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Condition
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67"/>
+                </identifier>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <encounter>
+                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <display value="Encounter"/>
+                </encounter>
+                <asserter>
+                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                </asserter>
+                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <code>
+                    <coding>
+                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
+                        <code value="79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
+                        <display value="Other chest pain"/>
+                    </coding>
+                </code>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/condition-category"/>
+                        <code value="complaint"/>
+                        <display value="Complaint"/>
+                    </coding>
+                </category>
+                <status value="confirmed"/>
+                <onsetDateTime value="2015-01-27T03:21:08+05:30"/>
+            </Condition>
+        </content>
+    </entry>
+    <entry>
+        <title>complaint</title>
+        <id>urn:025f73b2-2a78-4b31-b3db-58b449244c1a</id>
+        <updated>2015-01-27T14:21:40.312+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Condition
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:025f73b2-2a78-4b31-b3db-58b449244c1a"/>
+                </identifier>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <encounter>
+                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <display value="Encounter"/>
+                </encounter>
+                <asserter>
+                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                </asserter>
+                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <code>
+                    <coding>
+                        <display value="Mild Fever"/>
+                    </coding>
+                </code>
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/condition-category"/>
+                        <code value="complaint"/>
+                        <display value="Complaint"/>
+                    </coding>
+                </category>
+                <status value="confirmed"/>
+                <onsetDateTime value="2015-01-27T13:51:08+05:30"/>
+            </Condition>
+        </content>
+    </entry>
+</feed>

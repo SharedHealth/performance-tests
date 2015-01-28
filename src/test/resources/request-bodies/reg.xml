@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Encounter</title>
+    <id>urn:c8358477-6b5b-489d-aed9-7416a90b99a3</id>
+    <updated>2015-01-23T09:54:25+05:30</updated>
+    <entry>
+        <title>Composition</title>
+        <id>urn:0f37c577-bed6-4f08-9bd5-5f24cd35b291</id>
+        <updated>2015-01-23T09:54:40.190+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Composition
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:0f37c577-bed6-4f08-9bd5-5f24cd35b291"/>
+                </identifier>
+                <date value="2015-01-23T09:54:25+05:30"/>
+                <status value="final"/>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <encounter>
+                    <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
+                    <display value="Encounter"/>
+                </encounter>
+                <section>
+                    <content>
+                        <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
+                        <display value="Encounter"/>
+                    </content>
+                </section>
+            </Composition>
+        </content>
+    </entry>
+    <entry>
+        <title>Encounter</title>
+        <id>urn:57edda20-ef80-40a3-b76a-410f7358f682</id>
+        <updated>2015-01-23T09:54:40.190+05:30</updated>
+        <author>
+            <name>bahmni</name>
+        </author>
+        <content type="text/xml">
+            <Encounter
+                    xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <value value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
+                </identifier>
+                <status value="finished"/>
+                <class value="outpatient"/>
+                <type>
+                    <text value="REG"/>
+                </type>
+                <subject>
+                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <display value="${HEALTHID}"/>
+                </subject>
+                <participant>
+                    <individual>
+                        <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    </individual>
+                </participant>
+                <indication>
+                    <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
+                    <display value="Encounter"/>
+                </indication>
+                <serviceProvider>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10000069.json"/>
+                </serviceProvider>
+            </Encounter>
+        </content>
+    </entry>
+</feed>
