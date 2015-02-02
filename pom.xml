@@ -108,7 +108,7 @@
 							<resultsFolder>target/gatling/results</resultsFolder>
 							<bodiesFolder>src/test/resources/request-bodies</bodiesFolder>
 							<simulationsFolder>src/test/scala</simulationsFolder>
-							<simulationClass>Encounters</simulationClass>
+							<simulationClass>CreateEncounters</simulationClass>
 						</configuration>
 					</execution>
 				</executions>
