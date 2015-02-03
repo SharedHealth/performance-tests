@@ -6,25 +6,26 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
 class CatchmentFeed extends Simulation {
-  val patientId = core.Predef.csv("patients.txt").random
+  val feeder = core.Predef.csv("catchments").circular
 
   val httpConf = http
-    .baseURL("http://172.18.46.2:8081")
+    .baseURL("http://172.18.46.2")
     .header("X-Auth-Token", "8dad0c07-caf8-48a9-ac2a-1815a9aa11a1")
     .acceptHeader("application/atom+xml")
     .acceptEncodingHeader("gzip")
 
   val time = 600 seconds
 
-  val createEncounters = scenario("create encounters")
-    .feed(patientId)
+  val catchmentFeed = scenario("catchment feed")
+    .feed(feeder)
     .during(time) {
-    exec(http("get encounters")
-      .get("/patients/${HEALTHID}/encounters")
+    exec(http("catchment feed")
+      .get("/catchments/${CATCHMENT}/encounters?updatedSince=2015-01-01").header("facilityId","${FACILITY}")
+    .check()
     )
   }
   setUp(
-    createEncounters.inject(atOnceUsers(10)).protocols(httpConf)
+    catchmentFeed.inject(atOnceUsers(50)).protocols(httpConf)
   )
 }
 
