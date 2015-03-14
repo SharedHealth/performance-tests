@@ -15,7 +15,7 @@ class CreateEncounters extends Simulation {
     .acceptEncodingHeader("gzip")
 
 
-  val time = 600 seconds
+  val time = 240 seconds
 
   val createEncounters = scenario("create encounters")
     .feed(patientId)
@@ -35,7 +35,7 @@ class CreateEncounters extends Simulation {
 
   }
   setUp(
-    createEncounters.inject(atOnceUsers(50)).protocols(httpConf)
+    createEncounters.inject(atOnceUsers(100)).protocols(httpConf)
   )
 }
 

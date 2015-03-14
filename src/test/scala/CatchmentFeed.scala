@@ -14,7 +14,7 @@ class CatchmentFeed extends Simulation {
     .acceptHeader("application/atom+xml")
     .acceptEncodingHeader("gzip")
 
-  val time = 600 seconds
+  val time = 60 seconds
 
   val catchmentFeed = scenario("catchment feed")
     .feed(feeder)
