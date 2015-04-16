@@ -6,22 +6,24 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
 class CreateEncounters extends Simulation {
-  val patientId = core.Predef.csv("patients.txt").random
-
-  val httpConf = http
-    .baseURL("http://localhost:8081")
-    .header("client_id", "18549")
-    .header("From", "dmishra@thoughtworks.com")
-    .contentTypeHeader("application/xml;charset=UTF-8")
-    .acceptEncodingHeader("gzip")
+  val patientId = core.Predef.csv("patients.txt").circular
+  @volatile var auth_token = "tmvpjorMeF8rabzpYW6z4Yzt7VCUU6ucuoA1sVCmg"
 
   val login = http("login")
-    .post("http://172.18.46.56:8080/signin")
-    .header("X-Auth-Token", "1c2a599423203f639dcdd8574ac5391dd67d21316ea30ee364c8a8787fb79dd3")
-    .header("client_id", "18549")
-    .formParam("email", "dmishra@thoughtworks.com")
+    .post("http://hrmtest.dghs.gov.bd/api/1.0/sso/signin")
+    .header("X-Auth-Token", "6b83bf41083c7f37373bc12fb0dac856b95e95e5dccbf71361127fb9efd3a411")
+    .header("client_id", "18574")
+    .formParam("email", "facilityPerfm@test.com")
     .formParam("password", "thoughtworks").check(jsonPath("$.access_token")
-    .saveAs("token"))
+    .saveAs("token")
+    )
+
+  val httpConf = http
+    .baseURL("http://172.18.46.2:8082")
+    .header("client_id", "18574")
+    .header("From", "facilityPerfm@test.com")
+    .contentTypeHeader("application/xml;charset=UTF-8")
+    .acceptEncodingHeader("gzip")
 
   val register = http("registration")
     .post("/patients/${HEALTHID}/encounters")
@@ -39,15 +41,32 @@ class CreateEncounters extends Simulation {
     .body(ELFileBody("request-bodies/bigenc.xml"))
 
 
-  val time = 240 seconds
+  val time = 1200 seconds
+
+  var getAuthToken = scenario("Login")
+    .repeat(1) {
+    exec(login)
+      .exec(session => {
+      auth_token = session("token").as[String]
+      session
+    })
+  }
 
   val createEncounters = scenario("create encounters")
     .feed(patientId)
+    .exec(_.set("token", auth_token))
     .during(time) {
-    exec(login).exec(register).exec(smallEncounter).exec(bigEncounter)
+//     exec(register)
+       exec(smallEncounter)
+//       .exec(bigEncounter)
   }
+
+
   setUp(
-    createEncounters.inject(atOnceUsers(100)).protocols(httpConf)
+    getAuthToken.inject(atOnceUsers(1)),
+    createEncounters.inject(
+      nothingFor(5 seconds),
+      atOnceUsers(50)).protocols(httpConf)
   )
 }
 

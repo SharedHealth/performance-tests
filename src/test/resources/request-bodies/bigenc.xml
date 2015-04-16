@@ -19,7 +19,7 @@
                 <date value="2015-01-23T10:10:52+05:30"/>
                 <status value="final"/>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -168,7 +168,7 @@
                     <text value="Consultation"/>
                 </type>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <participant>
@@ -198,7 +198,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/e3aa74c7-3045-49f3-aff1-f4ad8f4b2d81"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/e3aa74c7-3045-49f3-aff1-f4ad8f4b2d81"/>
                         <code value="e3aa74c7-3045-49f3-aff1-f4ad8f4b2d81"/>
                         <display value="Hospital course"/>
                     </coding>
@@ -210,7 +210,7 @@
                     <value value="urn:df313dee-f49d-49d0-9868-de14debed638"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -228,7 +228,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/5b9d5427-3bd9-462c-9027-211f6e57a734"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/5b9d5427-3bd9-462c-9027-211f6e57a734"/>
                         <code value="5b9d5427-3bd9-462c-9027-211f6e57a734"/>
                         <display value="History and examination notes"/>
                     </coding>
@@ -240,7 +240,7 @@
                     <value value="urn:896dfc32-8360-4b2f-8228-48576ee7c6b0"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -258,7 +258,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/4fd7b256-6865-4481-beda-5a8fe5f1f779"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/4fd7b256-6865-4481-beda-5a8fe5f1f779"/>
                         <code value="4fd7b256-6865-4481-beda-5a8fe5f1f779"/>
                         <display value="Additional advice"/>
                     </coding>
@@ -270,7 +270,7 @@
                     <value value="urn:a72c7ed5-050a-497a-8f9b-ea8349c8b873"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -288,7 +288,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/d155384d-97b5-4c99-a2f9-0c313327003e"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/d155384d-97b5-4c99-a2f9-0c313327003e"/>
                         <code value="d155384d-97b5-4c99-a2f9-0c313327003e"/>
                         <display value="Follow up date"/>
                     </coding>
@@ -300,7 +300,7 @@
                     <value value="urn:3ce862c7-5e2c-4bc5-ac48-5f291d712d40"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -318,7 +318,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/1f828577-2a6f-4803-bd37-647aec0bf210"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/1f828577-2a6f-4803-bd37-647aec0bf210"/>
                         <code value="1f828577-2a6f-4803-bd37-647aec0bf210"/>
                         <display value="Discharge - Summary"/>
                     </coding>
@@ -329,7 +329,7 @@
                     <value value="urn:24925a3a-370b-4098-9298-caf94488f581"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <related>
@@ -373,7 +373,7 @@
                     <value value="urn:bbd717b8-bbb6-49f6-a782-5e608aff2b9a"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -386,12 +386,12 @@
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/referenceterms/b8d6be25-9547-462a-b858-0252ad04d4b3"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/b8d6be25-9547-462a-b858-0252ad04d4b3"/>
                         <code value="R07"/>
                         <display value="Pain in throat and chest"/>
                     </coding>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
                         <code value="d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
                         <display value="Pain in throat and chest"/>
                     </coding>
@@ -422,7 +422,7 @@
                     <value value="urn:fbfe04e3-ee9f-434b-ab95-03c8d4ea3eb4"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -435,7 +435,7 @@
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
                         <code value="79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
                         <display value="Other chest pain"/>
                     </coding>
@@ -466,7 +466,7 @@
                     <value value="urn:10ebca7e-7d6e-4d90-af61-2759776ff589"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -508,7 +508,7 @@
                     <value value="urn:9cc2f4fd-3064-4a64-8a0d-972c51b01c7d"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -521,12 +521,12 @@
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/referenceterms/ec91e43c-0af9-4a9e-859d-a573768d4cca"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/ec91e43c-0af9-4a9e-859d-a573768d4cca"/>
                         <code value="S40"/>
                         <display value="Superficial injury of shoulder and upper arm"/>
                     </coding>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/c1b62d97-a2f2-4fa3-982a-682a0289c92b"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/c1b62d97-a2f2-4fa3-982a-682a0289c92b"/>
                         <code value="c1b62d97-a2f2-4fa3-982a-682a0289c92b"/>
                         <display value="Superficial injury of shoulder and upper arm"/>
                     </coding>
@@ -554,7 +554,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/af747d2f-8946-4ca2-93ec-5eb76986aff8"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/af747d2f-8946-4ca2-93ec-5eb76986aff8"/>
                         <code value="af747d2f-8946-4ca2-93ec-5eb76986aff8"/>
                         <display value="Diastolic"/>
                     </coding>
@@ -566,7 +566,7 @@
                     <value value="urn:3c49fef2-769f-4193-b951-6fc62698b53d"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -584,7 +584,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/77405a73-b915-4a93-87a7-f29fe6697fb4"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/77405a73-b915-4a93-87a7-f29fe6697fb4"/>
                         <code value="77405a73-b915-4a93-87a7-f29fe6697fb4"/>
                         <display value="Systolic"/>
                     </coding>
@@ -596,7 +596,7 @@
                     <value value="urn:71bd8578-7b62-432b-bd9e-fd01b6b71ff1"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -614,7 +614,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/e69ef886-6914-4ed7-93a8-7b951dbf7139"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/e69ef886-6914-4ed7-93a8-7b951dbf7139"/>
                         <code value="e69ef886-6914-4ed7-93a8-7b951dbf7139"/>
                         <display value="Blood Pressure"/>
                     </coding>
@@ -625,7 +625,7 @@
                     <value value="urn:054e61b6-27d9-44c7-b99b-5df9c9df8623"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <related>
@@ -655,7 +655,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/22a952b6-cc36-45e8-8b52-ff5a90fa7c4f"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/22a952b6-cc36-45e8-8b52-ff5a90fa7c4f"/>
                         <code value="22a952b6-cc36-45e8-8b52-ff5a90fa7c4f"/>
                         <display value="Pulse"/>
                     </coding>
@@ -667,7 +667,7 @@
                     <value value="urn:5875a3ab-7089-4727-b38f-49ba604d1bcd"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -685,7 +685,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/a1257651-7473-4c9b-bb0a-1244c5f3c09d"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/a1257651-7473-4c9b-bb0a-1244c5f3c09d"/>
                         <code value="a1257651-7473-4c9b-bb0a-1244c5f3c09d"/>
                         <display value="Temperature"/>
                     </coding>
@@ -697,7 +697,7 @@
                     <value value="urn:f612fdca-691c-485c-b05a-9002ace7ae8b"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
             </Observation>
@@ -715,7 +715,7 @@
                     xmlns="http://hl7.org/fhir">
                 <name>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/44c245dd-d234-4991-a8b2-3c4a54d5092b"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/44c245dd-d234-4991-a8b2-3c4a54d5092b"/>
                         <code value="44c245dd-d234-4991-a8b2-3c4a54d5092b"/>
                         <display value="Vitals"/>
                     </coding>
@@ -726,7 +726,7 @@
                     <value value="urn:19d04ac8-a93d-4778-88ef-5765c2122c8c"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <related>
@@ -764,7 +764,7 @@
                     <value value="urn:065ed8fc-ec15-4c7d-97c3-66ac3e78508b"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <relation>
@@ -779,12 +779,12 @@
                     <condition>
                         <type>
                             <coding>
-                                <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/referenceterms/f5d45c35-4c02-42a4-b67b-fe9d8f2bddbd"/>
+                                <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/f5d45c35-4c02-42a4-b67b-fe9d8f2bddbd"/>
                                 <code value="C91"/>
                                 <display value="Lymphoid leukaemia"/>
                             </coding>
                             <coding>
-                                <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/3f08966f-3fd6-43b0-add5-6619808c618f"/>
+                                <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/3f08966f-3fd6-43b0-add5-6619808c618f"/>
                                 <code value="3f08966f-3fd6-43b0-add5-6619808c618f"/>
                                 <display value="Lymphoid leukaemia"/>
                             </coding>
@@ -816,13 +816,13 @@
                 <date value="2015-01-22T00:00:00+05:30"/>
                 <vaccineType>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/drugs/2eb06970-ca44-4f07-a4cc-99f4270d6f55"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/drugs/2eb06970-ca44-4f07-a4cc-99f4270d6f55"/>
                         <code value="2eb06970-ca44-4f07-a4cc-99f4270d6f55"/>
                         <display value="Yellow fever, live attenuated"/>
                     </coding>
                 </vaccineType>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <refusedIndicator value="false"/>
@@ -837,13 +837,13 @@
                 </route>
                 <doseQuantity>
                     <value value="1.0"/>
-                    <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/vs/Quantity-Units"/>
+                    <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/vs/Quantity-Units"/>
                     <code value="mcg"/>
                 </doseQuantity>
                 <explanation>
                     <reason>
                         <coding>
-                            <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/vs/Immunization-Reason"/>
+                            <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/vs/Immunization-Reason"/>
                             <code value="281657000"/>
                             <display value="Travel vaccinations"/>
                         </coding>
@@ -866,7 +866,7 @@
                     <value value="urn:f73616f0-034c-4969-949f-c6947ab914b3"/>
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -879,7 +879,7 @@
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/2218636a-0ef0-4fb1-ac7e-cf2a915b0ee4"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/2218636a-0ef0-4fb1-ac7e-cf2a915b0ee4"/>
                         <code value="2218636a-0ef0-4fb1-ac7e-cf2a915b0ee4"/>
                         <display value="Fracture in upper arm"/>
                     </coding>
@@ -910,7 +910,7 @@
                 </identifier>
                 <dateWritten value="2015-01-23T10:10:52+05:30"/>
                 <patient>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </patient>
                 <prescriber>
@@ -922,7 +922,7 @@
                 </encounter>
                 <medication>
                     <reference
-                            value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/drugs/3be99d23-e50d-41a6-ad8c-f6434e49f513"/>
+                            value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/drugs/3be99d23-e50d-41a6-ad8c-f6434e49f513"/>
                     <display value="Paracetamol1"/>
                 </medication>
                 <dosageInstruction>
@@ -936,14 +936,14 @@
                     </timingSchedule>
                     <route>
                         <coding>
-                            <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/vs/Route-of-Administration"/>
+                            <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/vs/Route-of-Administration"/>
                             <code value="Swallow"/>
                             <display value="Swallow"/>
                         </coding>
                     </route>
                     <doseQuantity>
                         <value value="5"/>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/vs/Quantity-Units"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/vs/Quantity-Units"/>
                         <code value="mg"/>
                     </doseQuantity>
                 </dosageInstruction>

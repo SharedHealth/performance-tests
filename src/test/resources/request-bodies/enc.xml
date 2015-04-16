@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed
-        xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
     <title>Encounter</title>
-    <id>urn:94b57cbc-4cf2-4100-a0bd-ce27639b2acf</id>
-    <updated>2015-01-27T14:21:08+05:30</updated>
+    <id>urn:553f5ab5-0c20-4ada-841b-dcb78faa1c69</id>
+    <updated>2015-04-16T16:01:33+05:30</updated>
+    <author>
+        <uri>http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json</uri>
+    </author>
     <entry>
         <title>Composition</title>
-        <id>urn:981b2b3c-942a-45dd-a844-0f61502d65c9</id>
-        <updated>2015-01-27T14:21:40.261+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
+        <id>urn:fb66becb-aaea-496b-aff4-099eae262806</id>
+        <updated>2015-04-16T16:01:41.104+05:30</updated>
         <content type="text/xml">
-            <Composition
-                    xmlns="http://hl7.org/fhir">
+            <Composition xmlns="http://hl7.org/fhir">
                 <identifier>
-                    <value value="urn:981b2b3c-942a-45dd-a844-0f61502d65c9"/>
+                    <value value="urn:fb66becb-aaea-496b-aff4-099eae262806" />
                 </identifier>
-                <date value="2015-01-27T14:21:08+05:30"/>
-                <status value="final"/>
+                <date value="2015-04-16T16:01:33+05:30" />
+                <status value="final" />
+                <confidentiality>
+                    <system value="http://hl7.org/fhir/v3/Confidentiality" />
+                    <code value="N" />
+                </confidentiality>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
+                <author>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json" />
+                </author>
                 <encounter>
-                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <display value="Encounter" />
                 </encounter>
                 <section>
                     <content>
-                        <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                        <display value="Encounter"/>
+                        <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                        <display value="Encounter" />
                     </content>
                 </section>
                 <section>
                     <content>
-                        <reference value="urn:0caf1152-2070-4008-a77b-d5241a862e84"/>
-                        <display value="complaint"/>
+                        <reference value="urn:271d401f-f55d-405a-b853-72b30efa0ea8" />
+                        <display value="complaint" />
                     </content>
                 </section>
                 <section>
                     <content>
-                        <reference value="urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67"/>
-                        <display value="complaint"/>
+                        <reference value="urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b" />
+                        <display value="complaint" />
                     </content>
                 </section>
                 <section>
                     <content>
-                        <reference value="urn:025f73b2-2a78-4b31-b3db-58b449244c1a"/>
-                        <display value="complaint"/>
+                        <reference value="urn:2d581ea2-4f76-410b-9416-83f6eb5611fc" />
+                        <display value="complaint" />
                     </content>
                 </section>
             </Composition>
@@ -56,173 +61,143 @@
     </entry>
     <entry>
         <title>Encounter</title>
-        <id>urn:cfa32702-bc7c-4fec-8e6c-3048d4417426</id>
-        <updated>2015-01-27T14:21:40.261+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
+        <id>urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307</id>
+        <updated>2015-04-16T16:01:41.104+05:30</updated>
         <content type="text/xml">
-            <Encounter
-                    xmlns="http://hl7.org/fhir">
+            <Encounter xmlns="http://hl7.org/fhir">
                 <identifier>
-                    <value value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
+                    <value value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
                 </identifier>
-                <status value="finished"/>
-                <class value="outpatient"/>
+                <status value="finished" />
+                <class value="outpatient" />
                 <type>
-                    <text value="Consultation"/>
+                    <text value="Consultation" />
                 </type>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
-                <participant>
-                    <individual>
-                        <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
-                    </individual>
-                </participant>
                 <indication>
-                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <display value="Encounter" />
                 </indication>
                 <serviceProvider>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10000069.json"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json" />
                 </serviceProvider>
             </Encounter>
         </content>
     </entry>
     <entry>
         <title>complaint</title>
-        <id>urn:0caf1152-2070-4008-a77b-d5241a862e84</id>
-        <updated>2015-01-27T14:21:40.312+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
+        <id>urn:271d401f-f55d-405a-b853-72b30efa0ea8</id>
+        <updated>2015-04-16T16:01:41.195+05:30</updated>
         <content type="text/xml">
-            <Condition
-                    xmlns="http://hl7.org/fhir">
+            <Condition xmlns="http://hl7.org/fhir">
                 <identifier>
-                    <value value="urn:0caf1152-2070-4008-a77b-d5241a862e84"/>
+                    <value value="urn:271d401f-f55d-405a-b853-72b30efa0ea8" />
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <display value="Encounter" />
                 </encounter>
-                <asserter>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
-                </asserter>
-                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <dateAsserted value="2015-04-16T16:01:33+05:30" />
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/referenceterms/b8d6be25-9547-462a-b858-0252ad04d4b3"/>
-                        <code value="R07"/>
-                        <display value="Pain in throat and chest"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/4084a8ba-8c34-46ab-8108-63e916a02ea1" />
+                        <code value="R07" />
+                        <display value="Pain in throat and chest" />
                     </coding>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
-                        <code value="d421ffa2-338c-43c4-89d9-be2b49262d4d"/>
-                        <display value="Pain in throat and chest"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/e280178f-1942-4578-a072-da4ac78d49f2" />
+                        <code value="e280178f-1942-4578-a072-da4ac78d49f2" />
+                        <display value="Pain in throat and chest" />
                     </coding>
                 </code>
                 <category>
                     <coding>
-                        <system value="http://hl7.org/fhir/condition-category"/>
-                        <code value="complaint"/>
-                        <display value="Complaint"/>
+                        <system value="http://hl7.org/fhir/condition-category" />
+                        <code value="complaint" />
+                        <display value="Complaint" />
                     </coding>
                 </category>
-                <status value="confirmed"/>
-                <onsetDateTime value="2015-01-23T14:21:08+05:30"/>
+                <status value="confirmed" />
+                <onsetDateTime value="2015-04-12T16:01:33+05:30" />
             </Condition>
         </content>
     </entry>
     <entry>
         <title>complaint</title>
-        <id>urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67</id>
-        <updated>2015-01-27T14:21:40.312+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
+        <id>urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b</id>
+        <updated>2015-04-16T16:01:41.195+05:30</updated>
         <content type="text/xml">
-            <Condition
-                    xmlns="http://hl7.org/fhir">
+            <Condition xmlns="http://hl7.org/fhir">
                 <identifier>
-                    <value value="urn:ba370a54-6ec3-4fe1-a2d2-a3d7ecf5be67"/>
+                    <value value="urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b" />
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <display value="Encounter" />
                 </encounter>
-                <asserter>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
-                </asserter>
-                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <dateAsserted value="2015-04-16T16:01:33+05:30" />
                 <code>
                     <coding>
-                        <system value="http://172.18.46.56:9080/openmrs/ws/rest/v1/tr/concepts/79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
-                        <code value="79c065ca-81e7-4f49-87f1-8efb6c5ff00d"/>
-                        <display value="Other chest pain"/>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/1931d7f8-3bf0-48b0-bb38-de6694c2abb4" />
+                        <code value="1931d7f8-3bf0-48b0-bb38-de6694c2abb4" />
+                        <display value="Other chest pain" />
                     </coding>
                 </code>
                 <category>
                     <coding>
-                        <system value="http://hl7.org/fhir/condition-category"/>
-                        <code value="complaint"/>
-                        <display value="Complaint"/>
+                        <system value="http://hl7.org/fhir/condition-category" />
+                        <code value="complaint" />
+                        <display value="Complaint" />
                     </coding>
                 </category>
-                <status value="confirmed"/>
-                <onsetDateTime value="2015-01-27T03:21:08+05:30"/>
+                <status value="confirmed" />
+                <onsetDateTime value="2015-04-16T05:01:33+05:30" />
             </Condition>
         </content>
     </entry>
     <entry>
         <title>complaint</title>
-        <id>urn:025f73b2-2a78-4b31-b3db-58b449244c1a</id>
-        <updated>2015-01-27T14:21:40.312+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
+        <id>urn:2d581ea2-4f76-410b-9416-83f6eb5611fc</id>
+        <updated>2015-04-16T16:01:41.195+05:30</updated>
         <content type="text/xml">
-            <Condition
-                    xmlns="http://hl7.org/fhir">
+            <Condition xmlns="http://hl7.org/fhir">
                 <identifier>
-                    <value value="urn:025f73b2-2a78-4b31-b3db-58b449244c1a"/>
+                    <value value="urn:2d581ea2-4f76-410b-9416-83f6eb5611fc" />
                 </identifier>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:cfa32702-bc7c-4fec-8e6c-3048d4417426"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <display value="Encounter" />
                 </encounter>
-                <asserter>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
-                </asserter>
-                <dateAsserted value="2015-01-27T14:21:08+05:30"/>
+                <dateAsserted value="2015-04-16T16:01:33+05:30" />
                 <code>
                     <coding>
-                        <display value="Mild Fever"/>
+                        <display value="Mild Fever" />
                     </coding>
                 </code>
                 <category>
                     <coding>
-                        <system value="http://hl7.org/fhir/condition-category"/>
-                        <code value="complaint"/>
-                        <display value="Complaint"/>
+                        <system value="http://hl7.org/fhir/condition-category" />
+                        <code value="complaint" />
+                        <display value="Complaint" />
                     </coding>
                 </category>
-                <status value="confirmed"/>
-                <onsetDateTime value="2015-01-27T13:51:08+05:30"/>
+                <status value="confirmed" />
+                <onsetDateTime value="2015-04-16T15:31:33+05:30" />
             </Condition>
         </content>
     </entry>

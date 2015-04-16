@@ -19,7 +19,7 @@
                 <date value="2015-01-23T09:54:25+05:30"/>
                 <status value="final"/>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <encounter>
@@ -54,7 +54,7 @@
                     <text value="REG"/>
                 </type>
                 <subject>
-                    <reference value="http://172.18.46.56:8081/api/v1/patients/${HEALTHID}"/>
+                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
                     <display value="${HEALTHID}"/>
                 </subject>
                 <participant>
