@@ -173,7 +173,7 @@
                 </subject>
                 <participant>
                     <individual>
-                        <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                        <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                     </individual>
                 </participant>
                 <indication>
@@ -381,7 +381,7 @@
                     <display value="Encounter"/>
                 </encounter>
                 <asserter>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </asserter>
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
@@ -430,7 +430,7 @@
                     <display value="Encounter"/>
                 </encounter>
                 <asserter>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </asserter>
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
@@ -474,7 +474,7 @@
                     <display value="Encounter"/>
                 </encounter>
                 <asserter>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </asserter>
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
@@ -516,7 +516,7 @@
                     <display value="Encounter"/>
                 </encounter>
                 <asserter>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </asserter>
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
@@ -828,7 +828,7 @@
                 <refusedIndicator value="false"/>
                 <reported value="false"/>
                 <requester>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </requester>
                 <route>
                     <coding>
@@ -874,7 +874,7 @@
                     <display value="Encounter"/>
                 </encounter>
                 <asserter>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </asserter>
                 <dateAsserted value="2015-01-23T10:10:52+05:30"/>
                 <code>
@@ -914,7 +914,7 @@
                     <display value="${HEALTHID}"/>
                 </patient>
                 <prescriber>
-                    <reference value="e8a8bdb9-9fdd-4e66-81ca-5abbb6308ccd"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
                 </prescriber>
                 <encounter>
                     <reference value="urn:96999405-b93a-4835-830d-5bdfdab2a651"/>

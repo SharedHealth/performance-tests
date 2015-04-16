@@ -9,8 +9,9 @@ class GetEncounters extends Simulation {
   val patientId = core.Predef.csv("patients.txt").random
 
   val httpConf = http
-    .baseURL("http://172.18.46.2")
-    .header("X-Auth-Token", "8dad0c07-caf8-48a9-ac2a-1815a9aa11a1")
+    .baseURL("http://localhost:8081")
+    .header("client_id", "18549")
+    .header("From", "dmishra@thoughtworks.com")
     .acceptHeader("application/atom+xml")
     .acceptEncodingHeader("gzip")
 
@@ -19,8 +20,17 @@ class GetEncounters extends Simulation {
   val getEncounters = scenario("get encounters")
     .feed(patientId)
     .during(time) {
-    exec(http("get encounters")
+    exec(http("login")
+      .post("http://172.18.46.56:8080/signin")
+      .header("X-Auth-Token", "1c2a599423203f639dcdd8574ac5391dd67d21316ea30ee364c8a8787fb79dd3")
+      .header("client_id", "18549")
+      .formParam("email", "dmishra@thoughtworks.com")
+      .formParam("password", "thoughtworks").check(jsonPath("$.access_token")
+      .saveAs("token")))
+    
+    .exec(http("get encounters")
       .get("/patients/${HEALTHID}/encounters")
+      .header("X-Auth-Token", "${token}")
     )
   }
   setUp(
