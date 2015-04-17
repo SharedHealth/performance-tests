@@ -56,9 +56,9 @@ class CreateEncounters extends Simulation {
     .feed(patientId)
     .exec(_.set("token", auth_token))
     .during(time) {
-//     exec(register)
-       exec(smallEncounter)
-//       .exec(bigEncounter)
+    exec(register)
+    .exec(smallEncounter)
+    .exec(bigEncounter)
   }
 
 
