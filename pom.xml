@@ -109,6 +109,8 @@
 							<bodiesFolder>src/test/resources/request-bodies</bodiesFolder>
 							<simulationsFolder>src/test/scala</simulationsFolder>
 							<simulationClass>CreateEncounters</simulationClass>
+							<!--<simulationClass>GetEncounters</simulationClass>-->
+							<!--<simulationClass>CatchmentFeed</simulationClass>-->
 						</configuration>
 					</execution>
 				</executions>

@@ -7,15 +7,15 @@ import scala.concurrent.duration._
 
 class CreateEncounters extends Simulation {
   val patientId = core.Predef.csv("patients.txt").circular
-  @volatile var auth_token = "tmvpjorMeF8rabzpYW6z4Yzt7VCUU6ucuoA1sVCmg"
+  @volatile var auth_token = ""
 
   val login = http("login")
-    .post("http://hrmtest.dghs.gov.bd/api/1.0/sso/signin")
-    .header("X-Auth-Token", "6b83bf41083c7f37373bc12fb0dac856b95e95e5dccbf71361127fb9efd3a411")
-    .header("client_id", "18574")
-    .formParam("email", "facilityPerfm@test.com")
-    .formParam("password", "thoughtworks").check(jsonPath("$.access_token")
-    .saveAs("token")
+      .post("http://hrmtest.dghs.gov.bd/api/1.0/sso/signin")
+      .header("X-Auth-Token", "6b83bf41083c7f37373bc12fb0dac856b95e95e5dccbf71361127fb9efd3a411")
+      .header("client_id", "18574")
+      .formParam("email", "facilityPerfm@test.com")
+      .formParam("password", "thoughtworks").check(jsonPath("$.access_token")
+      .saveAs("token")
     )
 
   val httpConf = http
@@ -41,7 +41,7 @@ class CreateEncounters extends Simulation {
     .body(ELFileBody("request-bodies/bigenc.xml"))
 
 
-  val time = 1200 seconds
+  val time = 5 seconds
 
   var getAuthToken = scenario("Login")
     .repeat(1) {
