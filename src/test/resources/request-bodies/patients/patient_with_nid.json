@@ -1,0 +1,19 @@
+{
+  "nid": 1428489224633,
+  "bin_brn": "14284892246330000",
+  "uid": "14284892246",
+  "given_name": "NID Performance",
+  "sur_name": "Patient",
+  "household_code": 44,
+  "date_of_birth": "2000-03-01",
+  "gender": "M",
+  "occupation": "05",
+  "present_address": {
+    "address_line": "Test",
+    "division_id": "30",
+    "district_id": "26",
+    "upazila_id": "07"
+  },
+  "status": {"type": "1"},
+  "confidential": "No"
+}

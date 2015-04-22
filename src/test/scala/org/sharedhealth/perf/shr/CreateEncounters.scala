@@ -1,36 +1,29 @@
+package org.sharedhealth.perf.shr
+
 import io.gatling.core
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import io.gatling.http.Predef._
+import org.sharedhealth.perf.Login
 
 import scala.concurrent.duration._
 
 class CreateEncounters extends Simulation {
   val patientId = core.Predef.csv("patients.txt").circular
-  @volatile var auth_token = ""
-
-  val login = http("login")
-      .post("http://hrmtest.dghs.gov.bd/api/1.0/sso/signin")
-      .header("X-Auth-Token", "6b83bf41083c7f37373bc12fb0dac856b95e95e5dccbf71361127fb9efd3a411")
-      .header("client_id", "18574")
-      .formParam("email", "facilityPerfm@test.com")
-      .formParam("password", "thoughtworks").check(jsonPath("$.access_token")
-      .saveAs("token")
-    )
 
   val httpConf = http
-    .baseURL("http://172.18.46.2:8082")
+    .baseURL("http://shrperf.twhosted.com")
     .header("client_id", "18574")
     .header("From", "facilityPerfm@test.com")
     .contentTypeHeader("application/xml;charset=UTF-8")
     .acceptEncodingHeader("gzip")
 
-  val register = http("registration")
+  val registration = http("registration")
     .post("/patients/${HEALTHID}/encounters")
     .header("X-Auth-Token", "${token}")
     .body(ELFileBody("request-bodies/reg.xml"))
 
-  val smallEncounter = http("encounter")
+  val encounter = http("encounter")
     .post("/patients/${HEALTHID}/encounters")
     .header("X-Auth-Token", "${token}")
     .body(ELFileBody("request-bodies/enc.xml"))
@@ -41,30 +34,45 @@ class CreateEncounters extends Simulation {
     .body(ELFileBody("request-bodies/bigenc.xml"))
 
 
-  val time = 5 seconds
+  val time = 100 seconds
 
   var getAuthToken = scenario("Login")
     .repeat(1) {
-    exec(login)
-      .exec(session => {
-      auth_token = session("token").as[String]
-      session
-    })
+    exec(Login.login)
+      .exec(Login.getTokenFromSession)
   }
 
-  val createEncounters = scenario("create encounters")
+  val register = scenario("register")
     .feed(patientId)
-    .exec(_.set("token", auth_token))
+    .exec(Login.setTokenToSession)
     .during(time) {
-    exec(register)
-    .exec(smallEncounter)
-    .exec(bigEncounter)
+      exec(registration)
+  }
+  
+  val createEncounter = scenario("create encounters")
+    .feed(patientId)
+    .exec(Login.setTokenToSession)
+    .during(time) {
+      exec(encounter)
+  }
+  
+  val createBigEncounter = scenario("create big encounters")
+    .feed(patientId)
+    .exec(Login.setTokenToSession)
+    .during(time) {
+      exec(bigEncounter)
   }
 
 
   setUp(
     getAuthToken.inject(atOnceUsers(1)),
-    createEncounters.inject(
+    register.inject(
+      nothingFor(5 seconds),
+      atOnceUsers(10)).protocols(httpConf),
+    createEncounter.inject(
+      nothingFor(5 seconds),
+      atOnceUsers(50)).protocols(httpConf),
+    createBigEncounter.inject(
       nothingFor(5 seconds),
       atOnceUsers(50)).protocols(httpConf)
   )
