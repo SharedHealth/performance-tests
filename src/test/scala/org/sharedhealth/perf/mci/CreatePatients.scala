@@ -1,5 +1,7 @@
 package org.sharedhealth.perf.mci
 
+import java.net.URLEncoder
+
 import io.gatling.core
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
@@ -10,13 +12,16 @@ import scala.concurrent.duration._
 
 class CreatePatients extends Simulation {
   val hidFeeder = core.Predef.csv("patients.txt").circular
+  val random = new util.Random
+  val nameFeeder = Iterator.continually(Map("lastname" -> Math.abs(random.nextInt()),
+  "firstname" -> Math.abs(random.nextInt())))
   
   val httpConf = http
-    .baseURL("http://mciperf.twhosted.com")
+    .baseURL("http://mciperf.twhosted.com:8082")
     .header("client_id", "18574")
     .header("From", "facilityPerfm@test.com")
     .contentTypeHeader("application/json")
-    .acceptEncodingHeader("gzip")
+    .acceptEncodingHeader("gzip").check(status.is(201))
 
   val patient = http("Patient")
     .post("/api/v1/patients")
@@ -43,6 +48,7 @@ class CreatePatients extends Simulation {
   }
 
   val createPatients = scenario("create patients")
+    .feed(nameFeeder)
     .exec(Login.setTokenToSession)
     .during(time) {
       exec(patient)
@@ -66,13 +72,13 @@ class CreatePatients extends Simulation {
     getAuthToken.inject(atOnceUsers(1)),
     createPatients.inject(
       nothingFor(5 seconds),
-      atOnceUsers(50)).protocols(httpConf),
-    createPatientsWithNid.inject(
-      nothingFor(5 seconds),
-      atOnceUsers(50)).protocols(httpConf),
-    updatePatient.inject(
-      nothingFor(5 seconds),
-      atOnceUsers(50)).protocols(httpConf)
+      atOnceUsers(2), rampUsers(2) over(5 seconds)).protocols(httpConf)
+//    createPatientsWithNid.inject(
+//      nothingFor(5 seconds),
+//      atOnceUsers(50)).protocols(httpConf)
+//    updatePatient.inject(
+//      nothingFor(5 seconds),
+//      atOnceUsers(50)).protocols(httpConf)
   )
 }
 

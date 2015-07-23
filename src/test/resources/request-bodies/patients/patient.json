@@ -1,6 +1,6 @@
 {
-  "given_name": "Performance",
-  "sur_name": "patient",
+  "given_name": "Mustafizur${firstname}",
+  "sur_name": "Rehman${lastname}",
   "date_of_birth": "2000-03-01",
   "gender": "M",
   "occupation": "05",
