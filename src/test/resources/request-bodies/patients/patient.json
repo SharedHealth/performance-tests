@@ -1,14 +1,22 @@
 {
+  "nid": "${sixDigitNumber}922${fourDigitNumber}",
+  "bin_brn": "${sixDigitNumber}9224633${fourDigitNumber}",
+  "uid": "${sixDigitNumber}9${fourDigitNumber}",
+  "household_code":"${sixDigitNumber}",
   "given_name": "Mustafizur${firstname}",
   "sur_name": "Rehman${lastname}",
   "date_of_birth": "2000-03-01",
   "gender": "M",
   "occupation": "05",
   "present_address": {
-    "address_line": "Test",
+    "address_line": "Test${fourDigitNumber}",
     "division_id": "30",
     "district_id": "26",
     "upazila_id": "07"
+  },
+  "phone_number": {
+    "country_code": "88",
+    "number": "8765123${fourDigitNumber}"
   },
   "status": {"type": "1"},
   "confidential": "No"
