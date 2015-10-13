@@ -43,7 +43,7 @@ class CreatePatients extends Simulation {
     .body(ELFileBody("request-bodies/patients/patient_update.json"))
 
 
-  val time = 900 seconds
+  val time = 20 seconds
 
   var getAuthToken = scenario("Login")
     .repeat(1) {

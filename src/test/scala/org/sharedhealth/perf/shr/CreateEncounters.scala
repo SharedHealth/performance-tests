@@ -34,7 +34,7 @@ class CreateEncounters extends Simulation {
     .body(ELFileBody("request-bodies/bigenc.xml"))
 
 
-  val time = 100 seconds
+  val time = 900 seconds
 
   var getAuthToken = scenario("Login")
     .repeat(1) {
@@ -71,10 +71,10 @@ class CreateEncounters extends Simulation {
       atOnceUsers(10)).protocols(httpConf),
     createEncounter.inject(
       nothingFor(5 seconds),
-      atOnceUsers(50)).protocols(httpConf),
+      atOnceUsers(10)).protocols(httpConf),
     createBigEncounter.inject(
       nothingFor(5 seconds),
-      atOnceUsers(50)).protocols(httpConf)
+      atOnceUsers(10)).protocols(httpConf)
   )
 }
 

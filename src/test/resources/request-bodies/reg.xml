@@ -1,75 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Encounter</title>
-    <id>urn:c8358477-6b5b-489d-aed9-7416a90b99a3</id>
-    <updated>2015-01-23T09:54:25+05:30</updated>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="019e25c6-ccb5-4fe5-be94-140876fae4bd" />
+    <meta>
+        <lastUpdated value="2015-10-05T14:34:53.000+05:30" />
+    </meta>
+    <type value="collection" />
     <entry>
-        <title>Composition</title>
-        <id>urn:0f37c577-bed6-4f08-9bd5-5f24cd35b291</id>
-        <updated>2015-01-23T09:54:40.190+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
-        <content type="text/xml">
-            <Composition
-                    xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:0fd2fd69-3305-496c-b353-0534dd06c456" />
+        <resource>
+            <Composition>
+                <id value="0fd2fd69-3305-496c-b353-0534dd06c456" />
                 <identifier>
-                    <value value="urn:0f37c577-bed6-4f08-9bd5-5f24cd35b291"/>
+                    <value value="urn:uuid:0fd2fd69-3305-496c-b353-0534dd06c456" />
                 </identifier>
-                <date value="2015-01-23T09:54:25+05:30"/>
-                <status value="final"/>
+                <date value="2015-10-05T14:34:53.000+05:30" />
+                <type>
+                    <coding>
+                        <system value="http://hl7.org/fhir/vs/doc-typecodes" />
+                        <code value="51899-3" />
+                        <display value="Details Document" />
+                    </coding>
+                </type>
+                <title value="Patient Clinical Encounter" />
+                <status value="final" />
+                <confidentiality value="N" />
                 <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
                 </subject>
+                <author>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10018686.json" />
+                </author>
                 <encounter>
-                    <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
-                    <display value="Encounter"/>
+                    <reference value="urn:uuid:8418036e-90aa-4a4d-a520-b0ef9079ca9e" />
                 </encounter>
                 <section>
-                    <content>
-                        <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
-                        <display value="Encounter"/>
-                    </content>
+                    <entry>
+                        <reference value="urn:uuid:8418036e-90aa-4a4d-a520-b0ef9079ca9e" />
+                        <display value="Encounter" />
+                    </entry>
                 </section>
             </Composition>
-        </content>
+        </resource>
     </entry>
     <entry>
-        <title>Encounter</title>
-        <id>urn:57edda20-ef80-40a3-b76a-410f7358f682</id>
-        <updated>2015-01-23T09:54:40.190+05:30</updated>
-        <author>
-            <name>bahmni</name>
-        </author>
-        <content type="text/xml">
-            <Encounter
-                    xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:8418036e-90aa-4a4d-a520-b0ef9079ca9e" />
+        <resource>
+            <Encounter>
+                <id value="8418036e-90aa-4a4d-a520-b0ef9079ca9e" />
                 <identifier>
-                    <value value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
+                    <value value="urn:uuid:8418036e-90aa-4a4d-a520-b0ef9079ca9e" />
                 </identifier>
-                <status value="finished"/>
-                <class value="outpatient"/>
+                <status value="finished" />
+                <class value="outpatient" />
                 <type>
-                    <text value="REG"/>
+                    <text value="REG" />
                 </type>
-                <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}"/>
-                    <display value="${HEALTHID}"/>
-                </subject>
+                <patient>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
+                </patient>
                 <participant>
                     <individual>
-                        <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113035.json"/>
+                        <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
                     </individual>
                 </participant>
-                <indication>
-                    <reference value="urn:57edda20-ef80-40a3-b76a-410f7358f682"/>
-                    <display value="Encounter"/>
-                </indication>
                 <serviceProvider>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10000069.json"/>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10018686.json" />
                 </serviceProvider>
             </Encounter>
-        </content>
+        </resource>
     </entry>
-</feed>
+</Bundle>

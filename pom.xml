@@ -108,10 +108,10 @@
 							<resultsFolder>target/gatling/results</resultsFolder>
 							<bodiesFolder>src/test/resources/request-bodies</bodiesFolder>
 							<simulationsFolder>src/test/scala</simulationsFolder>
-							<!--<simulationClass>org.sharedhealth.perf.shr.CreateEncounters</simulationClass>-->
+							<simulationClass>org.sharedhealth.perf.shr.CreateEncounters</simulationClass>
 							<!--<simulationClass>org.sharedhealth.perf.shr.GetEncounters</simulationClass>-->
 							<!--<simulationClass>org.sharedhealth.perf.shr.CatchmentFeed</simulationClass>-->
-							<simulationClass>org.sharedhealth.perf.mci.CreatePatients</simulationClass>
+							<!--<simulationClass>org.sharedhealth.perf.mci.CreatePatients</simulationClass>-->
 							<!--<simulationClass>org.sharedhealth.perf.mci.GetPatients</simulationClass>-->
 							<!--<simulationClass>org.sharedhealth.perf.mci.CatchmentApprovals</simulationClass>-->
 						</configuration>

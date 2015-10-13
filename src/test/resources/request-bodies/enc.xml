@@ -1,204 +1,341 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Encounter</title>
-    <id>urn:553f5ab5-0c20-4ada-841b-dcb78faa1c69</id>
-    <updated>2015-04-16T16:01:33+05:30</updated>
-    <author>
-        <uri>http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json</uri>
-    </author>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="3aea9e8a-b60b-4913-b0db-ee6981a03fa2" />
+    <meta>
+        <lastUpdated value="2015-10-08T10:33:28.000+05:30" />
+    </meta>
+    <type value="collection" />
     <entry>
-        <title>Composition</title>
-        <id>urn:fb66becb-aaea-496b-aff4-099eae262806</id>
-        <updated>2015-04-16T16:01:41.104+05:30</updated>
-        <content type="text/xml">
-            <Composition xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:cf493546-4a21-492a-94d4-f4ec7c9e626d" />
+        <resource>
+            <Composition>
+                <id value="cf493546-4a21-492a-94d4-f4ec7c9e626d" />
                 <identifier>
-                    <value value="urn:fb66becb-aaea-496b-aff4-099eae262806" />
+                    <value value="urn:uuid:cf493546-4a21-492a-94d4-f4ec7c9e626d" />
                 </identifier>
-                <date value="2015-04-16T16:01:33+05:30" />
+                <date value="2015-10-08T10:33:28.000+05:30" />
+                <type>
+                    <coding>
+                        <system value="http://hl7.org/fhir/vs/doc-typecodes" />
+                        <code value="51899-3" />
+                        <display value="Details Document" />
+                    </coding>
+                </type>
+                <title value="Patient Clinical Encounter" />
                 <status value="final" />
-                <confidentiality>
-                    <system value="http://hl7.org/fhir/v3/Confidentiality" />
-                    <code value="N" />
-                </confidentiality>
+                <confidentiality value="N" />
                 <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
                     <display value="${HEALTHID}" />
                 </subject>
                 <author>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json" />
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10018686.json" />
                 </author>
                 <encounter>
-                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
-                    <display value="Encounter" />
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 </encounter>
                 <section>
-                    <content>
-                        <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <entry>
+                        <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                         <display value="Encounter" />
-                    </content>
+                    </entry>
                 </section>
                 <section>
-                    <content>
-                        <reference value="urn:271d401f-f55d-405a-b853-72b30efa0ea8" />
-                        <display value="complaint" />
-                    </content>
+                    <entry>
+                        <reference value="urn:uuid:8c109ee8-a139-4a6f-b6f5-1bf6dc31eb0d" />
+                        <display value="Immunization" />
+                    </entry>
                 </section>
                 <section>
-                    <content>
-                        <reference value="urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b" />
-                        <display value="complaint" />
-                    </content>
+                    <entry>
+                        <reference value="urn:uuid:b792e45a-e468-4ebf-85c9-b83b8ab31c65" />
+                        <display value="Place of delivery" />
+                    </entry>
                 </section>
                 <section>
-                    <content>
-                        <reference value="urn:2d581ea2-4f76-410b-9416-83f6eb5611fc" />
-                        <display value="complaint" />
-                    </content>
+                    <entry>
+                        <reference value="urn:uuid:bf54688d-0e13-480c-9671-1a455d5870f1" />
+                        <display value="Delivered by" />
+                    </entry>
+                </section>
+                <section>
+                    <entry>
+                        <reference value="urn:uuid:cd3782a0-fd28-4f20-a4f3-66335acd1e26" />
+                        <display value="Type of delivery" />
+                    </entry>
+                </section>
+                <section>
+                    <entry>
+                        <reference value="urn:uuid:578be70a-582d-4fdb-ab8d-39f559ef7cfe" />
+                        <display value="Medication received" />
+                    </entry>
+                </section>
+                <section>
+                    <entry>
+                        <reference value="urn:uuid:18120bf5-8399-4657-9fa7-046d1294a49b" />
+                        <display value="Delivery Information" />
+                    </entry>
                 </section>
             </Composition>
-        </content>
+        </resource>
     </entry>
     <entry>
-        <title>Encounter</title>
-        <id>urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307</id>
-        <updated>2015-04-16T16:01:41.104+05:30</updated>
-        <content type="text/xml">
-            <Encounter xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
+        <resource>
+            <Encounter>
+                <id value="fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 <identifier>
-                    <value value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
+                    <value value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 </identifier>
                 <status value="finished" />
                 <class value="outpatient" />
                 <type>
                     <text value="Consultation" />
                 </type>
-                <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                <patient>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
                     <display value="${HEALTHID}" />
-                </subject>
-                <indication>
-                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
-                    <display value="Encounter" />
-                </indication>
+                </patient>
+                <participant>
+                    <individual>
+                        <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                    </individual>
+                </participant>
                 <serviceProvider>
-                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10019841.json" />
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/facilities/10018686.json" />
                 </serviceProvider>
             </Encounter>
-        </content>
+        </resource>
     </entry>
     <entry>
-        <title>complaint</title>
-        <id>urn:271d401f-f55d-405a-b853-72b30efa0ea8</id>
-        <updated>2015-04-16T16:01:41.195+05:30</updated>
-        <content type="text/xml">
-            <Condition xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:8c109ee8-a139-4a6f-b6f5-1bf6dc31eb0d" />
+        <resource>
+            <Immunization>
+                <id value="8c109ee8-a139-4a6f-b6f5-1bf6dc31eb0d" />
                 <identifier>
-                    <value value="urn:271d401f-f55d-405a-b853-72b30efa0ea8" />
+                    <value value="urn:uuid:8c109ee8-a139-4a6f-b6f5-1bf6dc31eb0d" />
                 </identifier>
+                <status value="completed" />
+                <date value="2015-09-27T00:00:00.000+05:30" />
+                <vaccineCode>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/drugs/0a9739d1-60e0-4c7d-adbe-c2bb52e40d34" />
+                        <code value="0a9739d1-60e0-4c7d-adbe-c2bb52e40d34" />
+                        <display value="Tetanus 2" />
+                    </coding>
+                </vaccineCode>
+                <patient>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
+                </patient>
+                <wasNotGiven value="true" />
+                <reported value="true" />
+                <requester>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </requester>
+                <encounter>
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
+                </encounter>
+            </Immunization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:b792e45a-e468-4ebf-85c9-b83b8ab31c65" />
+        <resource>
+            <Observation>
+                <id value="b792e45a-e468-4ebf-85c9-b83b8ab31c65" />
+                <identifier>
+                    <value value="urn:uuid:b792e45a-e468-4ebf-85c9-b83b8ab31c65" />
+                </identifier>
+                <status value="preliminary" />
+                <code>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fdaa2344-5203-11e5-ae36-005056820c09" />
+                        <code value="fdaa2344-5203-11e5-ae36-005056820c09" />
+                        <display value="Place of delivery" />
+                    </coding>
+                </code>
                 <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
                     <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
-                    <display value="Encounter" />
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 </encounter>
-                <dateAsserted value="2015-04-16T16:01:33+05:30" />
-                <code>
+                <performer>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </performer>
+                <valueCodeableConcept>
                     <coding>
-                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/4084a8ba-8c34-46ab-8108-63e916a02ea1" />
-                        <code value="R07" />
-                        <display value="Pain in throat and chest" />
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fdad96ea-5203-11e5-ae36-005056820c09" />
+                        <code value="fdad96ea-5203-11e5-ae36-005056820c09" />
+                        <display value="District hospital" />
                     </coding>
-                    <coding>
-                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/e280178f-1942-4578-a072-da4ac78d49f2" />
-                        <code value="e280178f-1942-4578-a072-da4ac78d49f2" />
-                        <display value="Pain in throat and chest" />
-                    </coding>
-                </code>
-                <category>
-                    <coding>
-                        <system value="http://hl7.org/fhir/condition-category" />
-                        <code value="complaint" />
-                        <display value="Complaint" />
-                    </coding>
-                </category>
-                <status value="confirmed" />
-                <onsetDateTime value="2015-04-12T16:01:33+05:30" />
-            </Condition>
-        </content>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
     </entry>
     <entry>
-        <title>complaint</title>
-        <id>urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b</id>
-        <updated>2015-04-16T16:01:41.195+05:30</updated>
-        <content type="text/xml">
-            <Condition xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:bf54688d-0e13-480c-9671-1a455d5870f1" />
+        <resource>
+            <Observation>
+                <id value="bf54688d-0e13-480c-9671-1a455d5870f1" />
                 <identifier>
-                    <value value="urn:ef1fa9d0-b217-4de0-8f03-f3182bf7cc0b" />
+                    <value value="urn:uuid:bf54688d-0e13-480c-9671-1a455d5870f1" />
                 </identifier>
+                <status value="preliminary" />
+                <code>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fdbd25c4-5203-11e5-ae36-005056820c09" />
+                        <code value="fdbd25c4-5203-11e5-ae36-005056820c09" />
+                        <display value="Delivered by" />
+                    </coding>
+                </code>
                 <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
                     <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
-                    <display value="Encounter" />
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 </encounter>
-                <dateAsserted value="2015-04-16T16:01:33+05:30" />
-                <code>
+                <performer>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </performer>
+                <valueCodeableConcept>
                     <coding>
-                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/1931d7f8-3bf0-48b0-bb38-de6694c2abb4" />
-                        <code value="1931d7f8-3bf0-48b0-bb38-de6694c2abb4" />
-                        <display value="Other chest pain" />
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fd9a13f6-5203-11e5-ae36-005056820c09" />
+                        <code value="fd9a13f6-5203-11e5-ae36-005056820c09" />
+                        <display value="Doctor" />
                     </coding>
-                </code>
-                <category>
-                    <coding>
-                        <system value="http://hl7.org/fhir/condition-category" />
-                        <code value="complaint" />
-                        <display value="Complaint" />
-                    </coding>
-                </category>
-                <status value="confirmed" />
-                <onsetDateTime value="2015-04-16T05:01:33+05:30" />
-            </Condition>
-        </content>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
     </entry>
     <entry>
-        <title>complaint</title>
-        <id>urn:2d581ea2-4f76-410b-9416-83f6eb5611fc</id>
-        <updated>2015-04-16T16:01:41.195+05:30</updated>
-        <content type="text/xml">
-            <Condition xmlns="http://hl7.org/fhir">
+        <fullUrl value="urn:uuid:cd3782a0-fd28-4f20-a4f3-66335acd1e26" />
+        <resource>
+            <Observation>
+                <id value="cd3782a0-fd28-4f20-a4f3-66335acd1e26" />
                 <identifier>
-                    <value value="urn:2d581ea2-4f76-410b-9416-83f6eb5611fc" />
+                    <value value="urn:uuid:cd3782a0-fd28-4f20-a4f3-66335acd1e26" />
                 </identifier>
+                <status value="preliminary" />
+                <code>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fdbec626-5203-11e5-ae36-005056820c09" />
+                        <code value="fdbec626-5203-11e5-ae36-005056820c09" />
+                        <display value="Type of delivery" />
+                    </coding>
+                </code>
                 <subject>
-                    <reference value="http://172.18.46.53:8081/api/v1/patients/${HEALTHID}" />
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
                     <display value="${HEALTHID}" />
                 </subject>
                 <encounter>
-                    <reference value="urn:6e2bd8d2-5ba2-4524-9e1d-bb4efd09f307" />
-                    <display value="Encounter" />
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
                 </encounter>
-                <dateAsserted value="2015-04-16T16:01:33+05:30" />
+                <performer>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </performer>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/referenceterms/fddc8000-5203-11e5-ae36-005056820c09" />
+                        <code value="O83.1" />
+                        <display value="Vaginal breech delivery" />
+                    </coding>
+                    <coding>
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fddaf91e-5203-11e5-ae36-005056820c09" />
+                        <code value="fddaf91e-5203-11e5-ae36-005056820c09" />
+                        <display value="Vaginal breech delivery" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:578be70a-582d-4fdb-ab8d-39f559ef7cfe" />
+        <resource>
+            <Observation>
+                <id value="578be70a-582d-4fdb-ab8d-39f559ef7cfe" />
+                <identifier>
+                    <value value="urn:uuid:578be70a-582d-4fdb-ab8d-39f559ef7cfe" />
+                </identifier>
+                <status value="preliminary" />
                 <code>
                     <coding>
-                        <display value="Mild Fever" />
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fddf7857-5203-11e5-ae36-005056820c09" />
+                        <code value="fddf7857-5203-11e5-ae36-005056820c09" />
+                        <display value="Medication received" />
                     </coding>
                 </code>
-                <category>
+                <subject>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
+                </encounter>
+                <performer>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </performer>
+                <valueCodeableConcept>
                     <coding>
-                        <system value="http://hl7.org/fhir/condition-category" />
-                        <code value="complaint" />
-                        <display value="Complaint" />
+                        <system value="http://172.18.46.53:9080/openmrs/ws/rest/v1/tr/concepts/fde0e488-5203-11e5-ae36-005056820c09" />
+                        <code value="fde0e488-5203-11e5-ae36-005056820c09" />
+                        <display value="Oxytocin" />
                     </coding>
-                </category>
-                <status value="confirmed" />
-                <onsetDateTime value="2015-04-16T15:31:33+05:30" />
-            </Condition>
-        </content>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
     </entry>
-</feed>
+    <entry>
+        <fullUrl value="urn:uuid:18120bf5-8399-4657-9fa7-046d1294a49b" />
+        <resource>
+            <Observation>
+                <id value="18120bf5-8399-4657-9fa7-046d1294a49b" />
+                <identifier>
+                    <value value="urn:uuid:18120bf5-8399-4657-9fa7-046d1294a49b" />
+                </identifier>
+                <status value="preliminary" />
+                <code>
+                    <coding>
+                        <display value="Delivery Information" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="http://172.18.46.2:8082/api/default/patients/${HEALTHID}" />
+                    <display value="${HEALTHID}" />
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:fe4bb93f-c6af-4ae2-b563-4822f9df900b" />
+                </encounter>
+                <performer>
+                    <reference value="http://hrmtest.dghs.gov.bd/api/1.0/providers/113576.json" />
+                </performer>
+                <related>
+                    <type value="has-member" />
+                    <target>
+                        <reference value="urn:uuid:b792e45a-e468-4ebf-85c9-b83b8ab31c65" />
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member" />
+                    <target>
+                        <reference value="urn:uuid:bf54688d-0e13-480c-9671-1a455d5870f1" />
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member" />
+                    <target>
+                        <reference value="urn:uuid:cd3782a0-fd28-4f20-a4f3-66335acd1e26" />
+                    </target>
+                </related>
+                <related>
+                    <type value="has-member" />
+                    <target>
+                        <reference value="urn:uuid:578be70a-582d-4fdb-ab8d-39f559ef7cfe" />
+                    </target>
+                </related>
+            </Observation>
+        </resource>
+    </entry>
+</Bundle>
